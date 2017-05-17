@@ -1,0 +1,234 @@
+
+
+#totals {
+    background-color: #DDDDDD;
+    height: 100px;
+    padding: 10px;
+}
+
+
+
+
+.blockers {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: left;
+    width:100%;
+}
+
+
+.blocker {
+    color:white;
+    display: inline-block;
+    font-weight: normal;
+    padding: 10px 50px 30px 50px;
+    text-align: center
+}
+
+.project {
+    cursor: pointer;
+    position: relative;
+    color:white;
+    display: inline-block;
+    font-weight: normal;
+    padding: 10px;
+    text-align: center;
+    width: 120px;
+    height:120px;
+    margin: 20px;
+
+}
+
+.component {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color:black;
+    font-size: 200%;
+    display: inline-block;
+    padding: 10px 10px 0px;
+    text-align: center;
+}
+
+.componentowner {
+    color:black;
+    font-weight: bold;
+    font-size: 170%;
+    font-style: italic;
+    padding: 0 10px 0px;
+}
+
+.componentmanager {
+    color:black;
+    font-weight: bold;
+    font-size: 170%;
+    font-style: italic;
+    padding: 0 10px 0px;
+}
+
+
+.release{
+    padding: 0 0 3px 0;
+}
+
+
+.count {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    color:white;
+    line-height: 1em;
+    font-size: 720%;
+    font-weight: bold;
+}
+
+.unassigned{
+    position: absolute;
+    right:0px;
+    bottom:0px;
+
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 0 80px 80px;
+    border-color: transparent transparent #000000 transparent;
+
+}
+
+
+.total {
+    cursor: pointer;
+    position: relative;
+    color:white;
+    display: inline-block;
+    font-weight: normal;
+    padding: 10px;
+    text-align: center;
+    width: 80px;
+    height:80px;
+    margin: 2px;
+
+}
+
+.total_count {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    color:white;
+    padding: 10px 0px 0px 0px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.total_unassigned{
+    position: absolute;
+    right:0px;
+    bottom:0px;
+    width: 0px;
+    height: 0px;
+    font-size: 10px;
+    border-style: solid;
+    border-width: 0 0 40px 40px;
+    border-color: transparent transparent #000000 transparent;
+
+}
+
+.total_count:hover {
+    color:white;
+}
+
+.total_count_unassigned {
+    position: absolute;
+    right:3px;
+    bottom:-37px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    color:white;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.total_count_unassigned:hover {
+    color:white;
+    font-weight: bold;
+}
+
+
+
+/*for the grid dashboard*/
+table.grid td div.small_unassigned {
+    position: absolute;
+    right:0;
+    bottom:0;
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 20px 20px;
+    border-color: transparent transparent #000000 transparent;
+    margin: 0;
+    padding: 0;
+    vertical-align:baseline;
+}
+
+.count:hover {
+    color:white;
+}
+
+.count_unassigned {
+    position: absolute;
+    right:3px;
+    bottom:-76px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    color:white;
+    font-size: 200%;
+    font-weight: normal;
+    line-height: 1em;
+}
+
+.count_unassigned:hover {
+    color:white;
+    font-weight: bold;
+}
+
+
+.lost {
+    position: absolute;
+    right:0;
+    top:0;
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 40px 40px 0;
+    border-color: transparent #000000 transparent transparent;
+}
+
+.count_lost {
+    position: absolute;
+    right:-37px;
+    top:3px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    color:white;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.count_lost:hover {
+    color:white;
+    font-weight: bold;
+}
+
+
+
+#noms {
+    background-color: #56C5FF;
+}
+#triage {
+    background-color: #008287;
+}
+#blockers {
+
+}
