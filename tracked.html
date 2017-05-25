@@ -143,13 +143,11 @@ importScript('js/main_lib.js', function(){
   var version = location.search.split('version=')[1];
 
   // Burndown Chart
-  // var iframe = document.createElement("iframe");
-  // iframe.style.width = "100%";
-  // iframe.style.height = "100%";
-  // iframe.style.border = "0";
-  // iframe.src = "https://ashughes1.github.io/pi-tracked-bugs-burndown/burndown.html?cf_tracking_firefox" + version + "=+&Since=2017-04-01";
-  // var body = document.getElementById("body");
-  // body.appendChild(iframe);
+  var iframe = document.createElement("iframe");
+  iframe.setAttribute('style', 'width:100%; height:100%; border:0');
+  iframe.src = "https://ashughes1.github.io/pi-tracked-bugs-burndown/burndown.html?cf_tracking_firefox" + version + "=+&Since=2017-04-01";
+  var body = document.getElementById("body");
+  body.appendChild(iframe);
   
   var thread;
 
