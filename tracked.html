@@ -105,6 +105,7 @@
 				<option value='57'>Firefox 57</option>
 			</select>
 			<button id='load' class='load'>Load</button>
+			<button id='burndown' class='burndown'>Burndown</button>
 		</center>
 		<div id="totals", style="width:100%;text-align:center;"><h1>Firefox Tracked Bugs</h1></div>
 		<div id="blockers" style="text-align: center;"></div>
@@ -136,6 +137,11 @@
             var v = document.getElementById('version').selectedOptions[0].value;
 			var url = location.href.split('tracked.html?')[0] + "tracked.html?version=" + v;
 			location.assign(url);
+		});
+		$('button.burndown').on('click', function(event) {
+            var v = document.getElementById('version').selectedOptions[0].value;
+			var url = 'https://ashughes1.github.io/pi-tracked-bugs-burndown/burndown.html?cf_tracking_firefox' + v + '=%2B&Since=2017-01-01';
+			window.open(url);
 		});
 	}
 
