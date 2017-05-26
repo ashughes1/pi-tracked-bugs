@@ -94,15 +94,15 @@
     ga('send', 'pageview');
 	</script>
 </HEAD>
-<BODY>
+<BODY onload="getVersionsFromBugzilla()">
 <div style="overflow:hidden;">
 	<div class="content" style="position:inherit;">
 		<center>
 			<select id='version'>
-				<option value='54'>Firefox 54</option>
+<!--				<option value='54'>Firefox 54</option>
 				<option value='55'>Firefox 55</option>
 				<option value='56'>Firefox 56</option>
-				<option value='57'>Firefox 57</option>
+				<option value='57'>Firefox 57</option>-->
 			</select>
 			<button id='load' class='load'>Load</button>
 			<button id='burndown' class='burndown'>Burndown</button>
@@ -142,6 +142,25 @@
             var v = document.getElementById('version').selectedOptions[0].value;
 			var url = 'https://ashughes1.github.io/pi-tracked-bugs-burndown/burndown.html?cf_tracking_firefox' + v + '=%2B&Since=2017-01-01';
 			window.open(url);
+		});
+	}
+	
+	// Get versions from tracking flags
+	function getVersionsFromBugzilla() {
+		var query = "https://bugzilla.mozilla.org/rest/field/bug";
+		$.getJSON(query, function(data) {
+			var fields = (data.fields) ? data.fields : -1;
+			if (fields != -1) {
+				$.each(fields, function(i, d) {
+					var name = (d.name.search("cf_tracking_firefox") != -1) ? d.name : -1;
+					if (name != -1) {
+						var version = name.split('_')[2].split('firefox')[1];
+						if (version != "") {
+							$('select[id="version"]').append($('<option>',{value:version, text:'Firefox ' + version}));
+						}
+					}
+				});	
+			}
 		});
 	}
 
