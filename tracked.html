@@ -157,6 +157,9 @@
 						var version = name.split('_')[2].split('firefox')[1];
 						if (version != "") {
 							$('select[id="version"]').append($('<option>',{value:version, text:'Firefox ' + version}));
+							if (version == location.search.split('version=')[1]) {
+								$('select[id="version"] option[value=' + version + ']').attr('selected', 'selected');
+							}
 						}
 					}
 				});	
