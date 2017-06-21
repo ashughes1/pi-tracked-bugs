@@ -97,13 +97,26 @@
 <BODY onload="getVersionsFromBugzilla()">
 <div style="overflow:hidden;">
 	<div class="content" style="position:inherit;">
+		<div style="text-align:center; width:60%; padding-left:20%">
+	        <h2>Product Integrity Bug Tracker</h2>
+	        <hr />
+	        <h4>
+	            This page shows the number of <u>unresolved bugs currently tracked</u>
+	            for the specified Firefox version. 
+	            <ul style="text-align:left; padding-left:20%">
+	            <li>Bugs are organized by category and owner.</li>
+	            <li>Categories are colour-coded based on days since being updated (see legend below).</li>
+	            <li>The larger number (middle) represents the total number of bugs in that category.</li>
+	            <li>The smaller number (lower-right corner) represents the number of unassigned bugs.</li>
+	            <li>Clicking one of these numbers will show the bug list in a new tab.</li>
+	            </ul>
+	            <br />
+	            <strong>Select a version and click <u>LOAD</u> to load the bugs or <u>BURNDOWN</u> to load the burndown chart.</strong><br />
+	        </h4>
+	        <hr /> 
+	    </div>
 		<center>
-			<select id='version'>
-<!--				<option value='54'>Firefox 54</option>
-				<option value='55'>Firefox 55</option>
-				<option value='56'>Firefox 56</option>
-				<option value='57'>Firefox 57</option>-->
-			</select>
+			<select id='version'></select>
 			<button id='load' class='load'>Load</button>
 			<button id='burndown' class='burndown'>Burndown</button>
 		</center>
